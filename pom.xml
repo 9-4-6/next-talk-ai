@@ -16,7 +16,19 @@
 
     <properties>
         <java.version>17</java.version>
+        <spring-ai.version>1.1.2</spring-ai.version>
     </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>${spring-ai.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -32,6 +44,38 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!-- deepseek LLM -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-deepseek</artifactId>
+        </dependency>
+        <!-- ollama LLM -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-ollama</artifactId>
+        </dependency>
+        <!-- qdrant 向量数据库 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-vector-store-qdrant</artifactId>
+        </dependency>
+        <!-- 拦截问题先从向量存储查询 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-advisors-vector-store</artifactId>
+        </dependency>
+        <!-- tool-search-tool -->
+        <dependency>
+            <groupId>org.springaicommunity</groupId>
+            <artifactId>tool-search-tool</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <!-- Choose a search strategy -->
+        <dependency>
+            <groupId>org.springaicommunity</groupId>
+            <artifactId>tool-searcher-vectorstore</artifactId>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
