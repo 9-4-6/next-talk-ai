@@ -32,7 +32,7 @@
 - 本地化模型：Llama 3
 
 ### 向量数据库
-- Chroma（轻量、易部署）
+- Qdrant
 
 ### 核心组件
 - Tool Search：工具语义检索核心
