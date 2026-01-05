@@ -55,15 +55,10 @@
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-ollama</artifactId>
         </dependency>
-        <!-- qdrant 向量数据库 -->
+        <!-- chroma 向量数据库 -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-starter-vector-store-qdrant</artifactId>
-        </dependency>
-        <!-- 拦截问题先从向量存储查询 -->
-        <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-advisors-vector-store</artifactId>
+            <artifactId>spring-ai-starter-vector-store-chroma</artifactId>
         </dependency>
         <!-- tool-search-tool -->
         <dependency>
