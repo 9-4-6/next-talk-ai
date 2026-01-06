@@ -1,5 +1,6 @@
 package com.gz.nexttalkai.service;
 
+import com.gz.nexttalkai.advisor.TokenCounterAdvisor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,7 @@ public class ChatService {
                     如果用户仍未提供月份，则默认查询当前月份（2026-01）。
                     回复要友好、自然、简洁。
                     """)
+                .advisors(new TokenCounterAdvisor())
                 .call()
                 .content();
     }

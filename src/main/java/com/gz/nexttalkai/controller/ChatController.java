@@ -1,10 +1,7 @@
 package com.gz.nexttalkai.controller;
 
 import com.gz.nexttalkai.service.ChatService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -16,7 +13,7 @@ public class ChatController {
     }
 
 
-    @PostMapping("/chat")
+    @GetMapping("/chat")
     public String chat(@RequestParam(value = "message") String message) {
         return chatService.chat(message);
     }
