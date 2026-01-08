@@ -6,7 +6,7 @@ spring:
 langchain4j:
   open-ai:
     chat-model:
-      api-key: sk-41e155ff94014b5bb84a1cd6f4554da3
+      api-key: your key
       model-name: deepseek-chat
       log-requests: true
       log-responses: true
