@@ -25,7 +25,7 @@
 ## 技术栈
 ### 核心框架
 - Spring Boot 3.x
-- Spring AI 1.1.x
+- langchain4j
 
 ### LLM 适配
 - 云端模型：deepseek

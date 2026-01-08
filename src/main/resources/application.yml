@@ -3,36 +3,10 @@ server:
 spring:
   application:
     name: next-talk-ai
-  ai:
-    # 关闭自动注入client
-    chat:
-      client:
-        enabled: false
-    # Ollama
-    ollama:
-      base-url: http://localhost:11434
-      embedding:
-        model: nomic-embed-text
-    # deepseek llm
-    deepseek:
-      api-key: your key
-      chat:
-        options:
-          model: deepseek-chat
-    # vectors
-    vectorstore:
-      chroma:
-        client:
-          host: http://192.168.0.107
-        initialize-schema: true
-        collection-name: power
-      #qdrant:
-        #host: 192.168.0.107
-        #port: 6334
-        #api-key: 123456
-        #collection-name: power
-        #use-tls: false
-        #initialize-schema: true
-logging:
-  level:
-    org.springframework.ai.chat.client.advisor: DEBUG
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: sk-41e155ff94014b5bb84a1cd6f4554da3
+      model-name: deepseek-chat
+      log-requests: true
+      log-responses: true
